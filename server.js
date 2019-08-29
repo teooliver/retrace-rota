@@ -11,7 +11,8 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 //Define routes
-app.use();
+app.use('/api/shifts', require('./routes/api/shifts'));
+app.use('/api/users', require('./routes/api/users'));
 
 //Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
